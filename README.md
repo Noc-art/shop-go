@@ -45,3 +45,17 @@ csrf_token (Cross-Site Request Forgery Token) adalah token unik yang digunakan u
 - Postman: melakukan pengecekan XML dan JSON pada data viewer untuk memastikan keberhasilkan kode.
 - Dokumentasi: Membuat README.md untuk mendokumentasikan kode yang telah dibuat
 - Version Control: Melakukan push ke GitHub untuk menyimpan versi terbaru kode shop-go.
+
+POSTMAN XML
+![image](https://github.com/user-attachments/assets/cd9fbe57-c3b8-4c02-be81-fbdc4d0dc805)
+
+POSTMAN XML by ID
+![image](https://github.com/user-attachments/assets/fefac668-0465-46a3-bf1c-21e1cdbadddd)
+
+POSTMAN JSON
+![image](https://github.com/user-attachments/assets/b8d2b6ff-508a-4a53-896f-67d3ae2188dc)
+
+POSTMAN JSON by ID
+![image](https://github.com/user-attachments/assets/3f6ef26a-0afb-4779-95b4-79bac0ded13c)
+
+

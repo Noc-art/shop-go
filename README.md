@@ -1,4 +1,4 @@
-**Pacil Web Service**: https://nevin-thang-shopgo.pbp.cs.ui.ac.id/
+**Pacil Web Service**: http://nevin-thang-shopgo.pbp.cs.ui.ac.id/
 
 **TUGAS 2**
 

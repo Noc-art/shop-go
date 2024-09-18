@@ -1,4 +1,6 @@
-TUGAS 2
+**Pacil Web Service**: https://nevin-thang-shopgo.pbp.cs.ui.ac.id/
+
+**TUGAS 2**
 
 1. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
 
@@ -23,7 +25,7 @@ TUGAS 2
 6. Mengapa model pada Django disebut sebagai ORM?
    ORM atau yang memiliki kepanjangan (Object-Relational Mapping) adalah sebuah teknik pemrograman yang digunakan untuk menghubungkan antara objek-objek dalam kode program berorientasi objek dengan tabel-tabel dalam basis data relasional. Model pada Django disebut sebagai ORM karena dia bertindak sebagai jembatan antara kode program yang ditulis dalam bahasa Object Oriented Programming seperti Python dan basis data relasional seperti SQLite, PostgreSQL, atau MySQL yang digunakan oleh aplikasi.
 
-TUGAS 3
+**TUGAS 3**
 
 1. Mengapa Kita Memerlukan Data Delivery dalam Pengimplementasian Sebuah Platform?
 Data delivery adalah proses mengirimkan data dari satu sistem ke sistem lain atau dari backend ke frontend dalam sebuah platform. Proses ini memastikan bahwa semua bagian dari platform memiliki data yang konsisten dan membantu mengintegrasikan berbagai layanan dan sistem dengan memastikan bahwa data dapat dikirim dan diterima dengan benar antara sistem yang berbeda. Selain itu, pengiriman data memastikan bahwa data yang dikirimkan aman dan tidak terjadi kesalahan saat dikirimkan.

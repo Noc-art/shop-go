@@ -33,7 +33,7 @@ def show_main(request):
         'npm' : '2306203204',
         'class' : 'PBP B',
         'product_entries' : product_entries,
-        'last_login': request.COOKIES['last_login'],
+        'last_login': request.COOKIES['last_login'] if 'last_login' in request.COOKIES else None,
     }
 
     return render(request, "main.html", context)

@@ -68,6 +68,7 @@ HttpResponseRedirect() memerlukan URL yang akan dijadikan tujuan redirect sebaga
 2. Cara Kerja Penghubungan Model Product dengan User
 Dalam menghubungkan model Product dengan User, kita menggunakan relationship One to Many dimana setiap pengguna dapat memiliki beberapa produk. Pertama-tama kita membuat terlebih dahulu model product yang bereferensi ke model user.
 
+```
 class Product(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)  
@@ -75,9 +76,12 @@ class Product(models.Model):
     price = models.IntegerField()
     description = models.TextField()
     stock = models.IntegerField()
+```
 
 Untuk mengakses data produk yang dimiliki pengguna tertentu, kita dapat menggunakan query untuk mendapatkan produk sesuai dengan pemiliknya.
+```
 product_entries = Product.objects.filter(user=request.user)
+```
 
 3.  Apa perbedaan antara authentication dan authorization, apakah yang dilakukan saat pengguna login? Jelaskan bagaimana Django mengimplementasikan kedua konsep tersebut.
 - Authentication adalah proses verifikasi identitas pengguna, yang bertujuan menjawab pertanyaan “siapa” yang akan login dengan melakukan validasi. Dalam Django, ini melibatkan pemeriksaan username dan password. Ketika pengguna login, Django memeriksa kredensial tersebut dan jika valid, pengguna akan terotentikasi.
@@ -89,13 +93,19 @@ product_entries = Product.objects.filter(user=request.user)
 Django mengingat pengguna yang telah login dengan menggunakan session dan cookie. Session adalah cara untuk menyimpan informasi di server tentang pengguna yang sedang aktif. Setiap pengguna yang mengakses aplikasi akan mendapatkan sesi unik yang diidentifikasi melalui ID sesi. Cookie adalah data kecil yang disimpan di sisi klien (browser) untuk menyimpan informasi yang dapat diakses oleh server. Cookie juga memiliki banyak kegunaan lain seperti menyimpan preferensi pengguna, pelacakan aktivitas, dan aktivitas lainnya seperti menyimpan item di keranjang belanja e-commerce. Sayangnya, tidak semua cookie aman karena rentan terhadap serangan XSS dan CSRF. Hal ini dapat dicegah dengan menggunakan atribut keamanan cookie seperti  HttpOnly, Secure, SameSite.
 
 6. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
-Membuat fungsi register, login, dan logout pada views.py menggunakan library django.contrib.auth
-Menambahkan path dari fungsi tersebut ke urls.py
-Melakukan restriksi akses ke halaman show_main dengan mengatur authorization dengan decorator @login_required
-Memanfaatkan cookies untuk membuat output last_login
-Membuat template HTML untuk registrasi, login, dan logout
-Membuat dummy user
-Menghubungkan product dan user dengan mereferensikan model product ke user dan memfilter product sesuai user yang sedang login.
-Migrate model yang telah diperbaharui
-Melakukan dokumentasi menggunakan README.md
+- Membuat fungsi register, login, dan logout pada views.py menggunakan library django.contrib.auth
+- Menambahkan path dari fungsi tersebut ke urls.py
+- Melakukan restriksi akses ke halaman show_main dengan mengatur authorization dengan decorator @login_required
+- Memanfaatkan cookies untuk membuat output last_login
+- Membuat template HTML untuk registrasi, login, dan logout
+- Membuat dummy user
+- Menghubungkan product dan user dengan mereferensikan model product ke user dan memfilter product sesuai user yang sedang login.
+- Migrate model yang telah diperbaharui
+- Melakukan dokumentasi menggunakan README.md
+
+Contoh user 1
+![image](https://github.com/user-attachments/assets/b61fc1dc-5245-4f5f-ace0-df58e5a1d20b)
+
+Contoh user 2
+![image](https://github.com/user-attachments/assets/f3e45909-d6a0-4d99-bddb-33b26a14ab13)
 

@@ -67,6 +67,7 @@ HttpResponseRedirect() memerlukan URL yang akan dijadikan tujuan redirect sebaga
 
 2. Cara Kerja Penghubungan Model Product dengan User
 Dalam menghubungkan model Product dengan User, kita menggunakan relationship One to Many dimana setiap pengguna dapat memiliki beberapa produk. Pertama-tama kita membuat terlebih dahulu model product yang bereferensi ke model user.
+
 class Product(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)  

@@ -109,3 +109,59 @@ Contoh user 1
 Contoh user 2
 ![image](https://github.com/user-attachments/assets/f3e45909-d6a0-4d99-bddb-33b26a14ab13)
 
+**Tugas 5**
+1. Jika terdapat beberapa CSS selector untuk suatu elemen HTML, jelaskan urutan prioritas pengambilan CSS selector tersebut! 
+Jika terdapat beberapa CSS selector untuk suatu elemen HTML, urutan prioritas pengambilan CSS selector akan ditentukan berdasarkan beberapa faktor:
+- Jika kita memiliki beberapa CSS selector, maka akan terdapat urutan prioritas sebagai berikut:
+- Inline styles memiliki prioritas tertinggi.
+- ID selectors  lebih spesifik dan memiliki prioritas lebih tinggi dibanding class, atribut, dan type selectors.
+- Class selectors, attribute selectors, dan pseudo-class selectors memiliki prioritas lebih rendah dari ID selectors, namun lebih tinggi dari type selectors.
+- Type selectors dan pseudo-element selectors memiliki prioritas paling rendah.
+- Jika dua selector memiliki specificity yang sama, yang terakhir diurutkan di CSS yang akan diterapkan.
+
+2. Mengapa responsive design menjadi konsep yang penting dalam pengembangan aplikasi web? Berikan contoh aplikasi yang sudah dan belum menerapkan responsive design!
+Responsive Design adalah teknik atau metode yang digunakan oleh web designer untuk menciptakan layout website yang dapat menyesuaikan diri dengan ukuran layar pengguna. Dengan cara ini, pengalaman pengguna ditingkatkan karena situs menjadi lebih mudah diakses dan digunakan di berbagai perangkat. Contoh aplikasi yang telah menerapkan responsive design adalah Google, yang menggunakan tata letak responsif untuk menyesuaikan antarmuka di berbagai perangkat. Di sisi lain, aplikasi yang belum menerapkan responsive design dapat dilihat dalam situs web pemerintahan. 
+
+3. Jelaskan perbedaan antara margin, border, dan padding, serta cara untuk mengimplementasikan ketiga hal tersebut!
+- Margin adalah jarak luar antara elemen dan elemen lain di sekitarnya, berfungsi untuk memberi ruang kosong yang bikin tata letak jadi lebih rapi. 
+'''
+.element {
+    margin: 20px; 
+    margin-top: 10px; 
+    margin-bottom: 15px; 
+    margin-left: 5px; 
+    margin-right: 5px; 
+}
+'''
+- Border adalah garis yang mengelilingi elemen, memisahkan padding dari margin dan memberikan batas yang jelas. 
+'''
+.element {
+    border: 2px solid black; 
+    border-top: 3px dashed red; 
+    border-radius: 5px; 
+}
+'''
+- Padding adalah jarak di dalam elemen, antara konten dan tepi border, yang membuat konten tidak terlalu dekat dengan batas. 
+'''
+.element {
+    padding: 15px; 
+    padding-top: 10px; 
+    padding-bottom: 5px; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+}
+'''
+Berikut contoh dari margin,border, dan padding
+![images](https://github.com/user-attachments/assets/e867eff3-095f-45f5-b6c2-1acff3ebd0da)
+
+4. Jelaskan konsep flex box dan grid layout beserta kegunaannya!
+- Flexbox  dirancang untuk layout satu dimensi, baik itu secara horizontal atau vertikal. Flexbox sangat berguna saat kamu ingin menyusun elemen dalam satu arah dan mengatur ruang antar elemen dengan lebih mudah. Kegunaannya termasuk memudahkan pembuatan layout responsif untuk elemen baris atau kolom yang fleksibel, seperti navbar atau galeri gambar.
+- Grid Layout adalah sistem tata letak dua dimensi yang memungkinkan pengaturan elemen di baris dan kolom secara bersamaan. Grid sangat cocok untuk membuat layout yang lebih kompleks, karena dapat mengatur elemen secara horizontal dan vertikal sekaligus.
+
+5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial)!
+- Implementasi Tailwind CSS: Pertama-tama, saya mengintegrasikan Tailwind CSS sebagai framework CSS pada aplikasi Django saya. Proses ini melibatkan penambahan Tailwind ke dalam pengaturan proyek serta pengaturan file konfigurasi yang diperlukan agar Tailwind dapat berfungsi dengan baik.
+- Pengembangan Fitur Edit dan Hapus Produk: Saya menambahkan berbagai fitur pada aplikasi, termasuk fungsi untuk mengedit dan menghapus produk. Fitur ini memungkinkan pengguna untuk dengan mudah melakukan pembaruan atau penghapusan data produk, meningkatkan interaktivitas dan fleksibilitas aplikasi.
+- Pembuatan Navbar: Saya merancang dan membuat komponen navbar dengan membuat file navbar.html di dalam direktori aplikasi. Navbar ini berfungsi sebagai elemen navigasi utama yang memungkinkan pengguna untuk berpindah antar halaman dengan mudah.
+- Implementasi Navbar pada Template HTML: Setelah membuat navbar, saya mengimplementasikannya di berbagai template HTML lainnya dalam aplikasi. Hal ini memastikan konsistensi dalam navigasi di seluruh halaman aplikasi.
+- Penambahan Static Files untuk CSS dan Gambar: Saya menambahkan file statis, termasuk CSS dan gambar, ke dalam aplikasi untuk mendukung tampilan dan nuansa aplikasi. Ini termasuk mengorganisir file statis dalam struktur direktori yang sesuai agar mudah diakses.
+- Styling Menggunakan Tailwind CSS: Terakhir, saya menerapkan styling CSS menggunakan Tailwind yang telah ditambahkan sebelumnya. Dengan memanfaatkan utility classes dari Tailwind, saya dapat menciptakan desain yang responsif dan modern tanpa perlu menulis banyak kode CSS secara manual.

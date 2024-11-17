@@ -165,3 +165,23 @@ Berikut contoh dari margin,border, dan padding
 - Implementasi Navbar pada Template HTML: Setelah membuat navbar, saya mengimplementasikannya di berbagai template HTML lainnya dalam aplikasi. Hal ini memastikan konsistensi dalam navigasi di seluruh halaman aplikasi.
 - Penambahan Static Files untuk CSS dan Gambar: Saya menambahkan file statis, termasuk CSS dan gambar, ke dalam aplikasi untuk mendukung tampilan dan nuansa aplikasi. Ini termasuk mengorganisir file statis dalam struktur direktori yang sesuai agar mudah diakses.
 - Styling Menggunakan Tailwind CSS: Terakhir, saya menerapkan styling CSS menggunakan Tailwind yang telah ditambahkan sebelumnya. Dengan memanfaatkan utility classes dari Tailwind, saya dapat menciptakan desain yang responsif dan modern tanpa perlu menulis banyak kode CSS secara manual.
+
+**Tugas 6**
+1. Jelaskan manfaat dari penggunaan JavaScript dalam pengembangan aplikasi web!
+JavaScript memungkinkan kita untuk membuat suatu website yang responsif dan dinamis. Kita dapat menambahkan animasi, formulir validasi, dan konten dinamis tanpa perlu memuat ulang halaman. JavaScript juga dapat mengubah, menambah, atau menghapus elemen HTML di halaman secara dinamis. Dengan bantuan AJAX, JavaScript juga dapat melakukan Asynchronous Web Communication.
+
+2. Jelaskan fungsi dari penggunaan await ketika kita menggunakan fetch()! Apa yang akan terjadi jika kita tidak menggunakan await?
+await digunakan untuk menunggu hasil dari promise yang dikembalikan oleh fetch(). Dengan menggunakan await, eksekusi kode akan berhenti hingga promise tersebut diselesaikan atau ditolak. Jika tidak Menggunakan await, program akan langsung melanjutkan eksekusi tanpa menunggu data dari fetch(). Ini dapat menyebabkan kode mencoba mengakses data yang belum tersedia, yang dimana akan menghasilkan error.
+
+3. Mengapa kita perlu menggunakan decorator csrf_exempt pada view yang akan digunakan untuk AJAX POST?
+csrf_exempt digunakan untuk menonaktifkan pemeriksaan CSRF (Cross-Site Request Forgery) pada view yang akan digunakan untuk menerima request POST dari AJAX. Untuk pengembangan awal, menggunakan csrf_exempt dapat mengurangi kerumitan dan memungkinkan pengujian fungsionalitas tanpa gangguan. Kita menjadi tidak perlu menyertakan token CSRF dalam setiap permintaan AJAX.
+
+4. Pada tutorial PBP minggu ini, pembersihan data input pengguna dilakukan di belakang (backend) juga. Mengapa hal tersebut tidak dilakukan di frontend saja?
+Pembersihan data di backend sangat penting untuk mencegah serangan seperti SQL Injection dan XSS. Dengan pembersihan ini, data yang disimpan di server bisa dipastikan valid, terlepas dari apa yang dikirim oleh pengguna. Melakukan pembersihan di frontend dan backend adalah praktik terbaik untuk menjaga keamanan data.
+
+5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial)!
+- Membuat Views dan Routing URL: saya menyiapkan view di Django untuk menangani request AJAX dan tambahkan routing URL yang sesuai.
+- Mengimplementasikan API fetch(): saya menggunakan fetch() di JavaScript dengan async dan await untuk mengirim data produk ke server secara asinkron.
+- Membuat Modal untuk Form Penambahan Produk: saya membuat modal di HTML yang berisi form untuk menginput data produk, seperti nama, harga, dan deskripsi.
+- Membuat Fungsi untuk Menambahkan Produk: saya membuat fungsi JavaScript yang mengumpulkan data dari form dan memanggil fungsi addProduct() untuk mengirim data ke server.
+- Mengimplementasikan Pencegahan XSS: saya menggunakan strip_tags di Django dan DOMPurify di frontend untuk menghapus tag HTML berbahaya dari input pengguna.
